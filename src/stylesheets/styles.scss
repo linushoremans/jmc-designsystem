@@ -1,2 +1,122 @@
 // Load CSS Reset from NPM
-@import "~normalize.css"
+@import "~normalize.css";
+
+body {
+  font-family: Roboto, Arial, Helvetica, sans-serif;
+  background-color: white;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+}
+.page-wrapper {
+  display: flex;
+  flex-flow: column;
+  height: 100%;
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  width: 100vw;
+  height: 5em;
+  .logo {
+    margin-left: 1em;
+    // border: 1px dotted purple;
+    display: flex;
+    h1 {
+      display: inline-block;
+      margin-right: auto;
+      margin-left: 0.2em;
+    }
+    img {
+      //justify-content: flex-start;
+    }
+  }
+
+  ul {
+    display: flex;
+    align-items: stretch; /* Default */
+
+    li {
+      display: block;
+      margin: 1em;
+      text-align: center;
+
+      a.active {
+        background-color: #BBE7FF;
+       
+        padding: 1em 2em;
+        color: #333;
+        // border: 1px solid #43bcee;
+      }
+      a {
+        padding: 1em 2em;
+        border-radius: 4px;
+        font-weight: 800;
+        &:hover {
+          color: white;
+          background-color: #BBE7FF;
+        }
+        &:active {
+          color: white;
+          background-color: #BBE7FF;
+        }
+        &:visited {
+          color: #333;
+        }
+      }
+    }
+  }
+}
+
+.body-wrapper {
+  height: 100vh;
+  flex-grow: 1;
+  //   border: 1px dotted purple;
+  background-image: url("../images/bg-body.png");
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+  .homepage-hero {
+    // border: 1px solid red;
+    padding: 2em;
+    width: 40em;
+    height: calc(100% - 5em);
+    h2#hp-hero {
+      font-size: 6em;
+      letter-spacing: -5px;
+      background-color: white;
+      padding: 0 0 0 0.2em;
+      margin: 0 0 -0.15em 0;
+      //   border: 1px solid red;
+      &:before {
+        display: inline-block;
+        content: " ";
+        padding: 0;
+        background-image: url(../images/logo.svg);
+        background-size: 75px 75px;
+        height: 75px;
+        width: 75px;
+        background-repeat: no-repeat;
+      }
+    }
+    .card-link {
+      background-color: white;
+      padding: 2em;
+      width: 23em;
+      &:hover {
+        background-color: red;
+      }
+    }
+  }
+}
+.bg-img2 {
+  background-image: url("../images/bg-3.png");
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+}
+
+.card-link {
+ 
+}
